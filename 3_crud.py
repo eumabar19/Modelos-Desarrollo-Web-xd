@@ -20,7 +20,7 @@ User(id=6,Survived=0,Pclass=3,Name="Moran, Mr. James       ",sex="male  ", age=4
 User(id=7,Survived=0,Pclass=1,Name="McCarthy, Mr. Timothy J",sex= "male ", age=54),  
 User(id=8,Survived=0,Pclass=3,Name="Palsson, Master. Gosta ",sex="male  ", age=2 ),   
 User(id=9,Survived=1,Pclass=3,Name="Johnson, Mrs. Oscar W  ",sex="female", age=27),
-User(id=1,Survived=0  ,Pclass=1   ,Name="    Nasser, Mrs. Nicholas "  ,sex="female" ,age= 14),
+User(id=10,Survived=0  ,Pclass=1   ,Name="    Nasser, Mrs. Nicholas "  ,sex="female" ,age= 14),
 User(id=11,Survived=  1,Pclass=   3,Name="   Sandstrom, Miss. Margue" ,sex="female" ,age= 4 ),
 User(id=12,Survived=  1,Pclass=   1,Name="   Bonnell, Miss. Elizabet" ,sex="male  " ,age= 58),  
 User(id=13,Survived=  0,Pclass=   3,Name="   Saundercock, Mr. Willia" ,sex="male  " ,age= 20), 
