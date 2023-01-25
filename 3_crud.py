@@ -47,14 +47,14 @@ async def usersclass(id:int):
     try:
         return list(users)[0]
     except:
-        return{"error":"No se ha encontrado el usuario"} 
+        return{"Error":"No se ha encontrado el usuario"} 
 
 @app.post("/usersclass/")
 async def usersclass(user:User):
 
     for index, guardar_usuario in enumerate(users_list):
         if guardar_usuario.id == user.id:
-            return {"errror":"el usuario ya existe"}
+            return {"Error":"El usuario ya existe"}
     else:
         users_list.append(user)
         return user
@@ -62,14 +62,28 @@ async def usersclass(user:User):
 @app.put("/usersclass/")
 async def usersclass(user:User):
     
-    found=False     #Usamos bandera found para verificar si hemos encontrado el usuario 
+    found=False
     
     for index, saved_user in enumerate(users_list):
-        if saved_user.id == user.id:  #Si el Id del usuario guardado es igual al Id del usuario nuevo
-           users_list[index] = user  #accedemos al indice de la lista que hemos encontrado y actualizamos con el nuevo usuario
+        if saved_user.id == user.id:
+           users_list[index] = user
            found=True
            
     if not found:
-        return {"error":"No se ha actualizado el usuario"}
+        return {"Error":"No se ha actualizado el usuario"}
     else:
         return 
+    
+@app.delete("/usersclass/{id}")
+async def usersclass(id:int):
+    
+    found=False
+    
+    for index, saved_user in enumerate(users_list):
+        if saved_user.id ==id:
+           del users_list[index]
+           found=True
+           return "El registro se ha eliminado exitosamente"
+       
+    if not found:
+        return {"Error":"No se ha eliminado el usuario"}
